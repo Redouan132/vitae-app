@@ -1,33 +1,187 @@
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* =============================================
+   VITAE — Estilos globales
+   =============================================
+   Paleta de colores y tipografía premium.
+   Ajusta las variables CSS para cambiar el tema
+   en toda la aplicación de una sola vez.
+   ============================================= */
+
 :root {
-  --bg:#f4f9f5; --surface:#ffffff; --card:#ffffff; --card-alt:#e8f5ed;
-  --green:#1a7a4a; --green-light:#27a05f; --green-pale:#e8f5ed; --green-dark:#145c38;
-  --accent:#34c472; --cream:#1a2e23; --muted:#6b8c78;
-  --border:rgba(26,122,74,0.15); --border-sage:rgba(26,122,74,0.2);
-  --gold:#1a7a4a; --gold-light:#27a05f; --sage:#34c472; --sage-dark:#1a7a4a;
-  --font-serif:'Poppins',sans-serif; --font-sans:'Poppins',sans-serif;
-  --nav-height:60px;
+  /* Fondo y superficies */
+  --bg:        #0b1a12;
+  --surface:   #112017;
+  --card:      #172c1f;
+  --card-alt:  #1e3829;
+
+  /* Colores de marca */
+  --gold:      #c9a96e;
+  --gold-light:#e8c98a;
+  --sage:      #7ab896;
+  --sage-dark: #4a9972;
+  --cream:     #f0ece1;
+  --muted:     #8aab96;
+
+  /* Bordes */
+  --border:    rgba(201, 169, 110, 0.18);
+  --border-sage: rgba(122, 184, 150, 0.2);
+
+  /* Tipografías */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'DM Sans', system-ui, sans-serif;
+
+  /* Espaciado */
+  --nav-height: 60px;
 }
-html { scroll-behavior: smooth; }
-body { background-color: var(--bg); color: var(--cream); font-family: 'Poppins',sans-serif; font-size:15px; line-height:1.6; min-height:100vh; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
-h1,h2,h3 { font-family:'Poppins',sans-serif; font-weight:600; line-height:1.2; }
-button { font-family:'Poppins',sans-serif; cursor:pointer; }
-a { color:var(--green); text-decoration:none; }
-::-webkit-scrollbar { width:4px; }
-::-webkit-scrollbar-track { background:var(--bg); }
-::-webkit-scrollbar-thumb { background:var(--green-pale); border-radius:2px; }
-.serif { font-family:'Poppins',sans-serif; }
-.text-gold { color:var(--green); }
-.text-sage { color:var(--accent); }
-.text-muted { color:var(--muted); }
-.text-cream { color:var(--cream); }
-@keyframes fadeInUp { from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);} }
-.fade-in { animation:fadeInUp 0.35s ease both; }
-.app-layout { display:flex; flex-direction:column; min-height:100vh; }
-.main-content { flex:1; padding-bottom:2rem; max-width:680px; margin:0 auto; width:100%; }
-.btn-primary { background:var(--green); color:#fff; border:none; padding:12px 28px; border-radius:30px; font-weight:600; font-size:14px; font-family:'Poppins',sans-serif; transition:background 0.2s,transform 0.15s; cursor:pointer; }
-.btn-primary:hover { background:var(--green-light); transform:translateY(-1px); }
-.btn-ghost { background:none; border:1.5px solid var(--border); color:var(--green); padding:12px 28px; border-radius:30px; font-size:14px; font-family:'Poppins',sans-serif; transition:border-color 0.2s,color 0.2s; cursor:pointer; }
-.btn-ghost:hover { border-color:var(--green); background:var(--green-pale); }
-.bar-track { background:rgba(26,122,74,0.1); border-radius:6px; height:8px; overflow:hidden; }
-.bar-fill { height:100%; border-radius:6px; transition:width 0.8s cubic-bezier(0.4,0,0.2,1); }
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--cream);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tipografía base */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--card-alt); border-radius: 2px; }
+
+/* Clases de utilidad */
+.serif        { font-family: var(--font-serif); }
+.text-gold    { color: var(--gold); }
+.text-sage    { color: var(--sage); }
+.text-muted   { color: var(--muted); }
+.text-cream   { color: var(--cream); }
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeInUp 0.35s ease both;
+}
+
+/* Layout principal */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 2rem;
+  max-width: 680px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Botones reutilizables */
+.btn-primary {
+  background: var(--gold);
+  color: #0b1a12;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-ghost {
+  background: none;
+  border: 0.5px solid var(--border);
+  color: var(--cream);
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Sección título */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem 0.5rem;
+}
+.section-header h3 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 300;
+}
+.section-header button {
+  font-size: 11px;
+  color: var(--gold);
+  background: none;
+  border: none;
+}
+
+/* Tarjetas base */
+.card {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 18px;
+}
+
+/* Progress bar reutilizable */
+.bar-track {
+  background: rgba(255,255,255,0.06);
+  border-radius: 6px;
+  height: 6px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
