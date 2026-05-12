@@ -1,7 +1,6 @@
 {
   "name": "vitae-app",
   "version": "2.0.0",
-  "description": "Vitae — App premium de bienestar y nutrición",
   "type": "module",
   "scripts": {
     "dev": "vite",
