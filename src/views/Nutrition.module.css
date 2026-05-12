@@ -1,0 +1,183 @@
+.wrapper { padding-bottom: 2rem; }
+
+.header { padding: 1.5rem 1.5rem 0.5rem; }
+.dateLabel {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.header h2 { font-size: 28px; }
+
+/* Macro ring card */
+.macroCard {
+  margin: 1rem 1.5rem;
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.ringWrap {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+}
+.ringCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.ringNum {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1;
+}
+.ringLabel { font-size: 10px; color: var(--muted); letter-spacing: 0.5px; }
+
+.macroList { flex: 1; min-width: 0; }
+.macroRow  { margin-bottom: 10px; }
+.macroLabelRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: var(--cream);
+}
+.remaining { font-size: 11px; color: var(--muted); margin-top: 10px; }
+
+/* Section header */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem 0.5rem;
+}
+.sectionHeader h3 { font-size: 20px; font-weight: 300; }
+.waterCount { font-size: 13px; color: var(--sage); font-family: var(--font-serif); }
+.addBtn {
+  font-size: 11px;
+  color: var(--gold);
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+}
+
+/* Water */
+.waterCard {
+  margin: 0 1.5rem 0.5rem;
+  background: var(--card);
+  border: 0.5px solid var(--border-sage);
+  border-radius: 16px;
+  padding: 1.25rem;
+}
+.waterTrack { display: flex; gap: 6px; margin-bottom: 0.5rem; }
+.waterDrop {
+  width: 28px;
+  height: 36px;
+  border-radius: 50% 50% 45% 45%;
+  border: 1.5px solid var(--sage-dark);
+  background: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.waterDrop.filled {
+  background: var(--sage-dark);
+  border-color: var(--sage-dark);
+}
+.waterHint { font-size: 11px; color: var(--muted); }
+
+/* Food list */
+.foodList {
+  padding: 0.5rem 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.foodItem {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 14px;
+  padding: 0.875rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.foodName   { font-size: 14px; color: var(--cream); font-weight: 400; margin-bottom: 2px; }
+.foodDetail { font-size: 11px; color: var(--muted); }
+.foodRight  { display: flex; align-items: center; gap: 8px; text-align: right; flex-shrink: 0; }
+.foodKcal   { font-family: var(--font-serif); font-size: 20px; color: var(--gold); line-height: 1; }
+.foodKcalLabel { font-size: 10px; color: var(--muted); }
+.removeBtn  {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1;
+  transition: color 0.2s;
+  padding: 0 4px;
+}
+.removeBtn:hover { color: #e05a5a; }
+
+/* Search */
+.searchBar {
+  margin: 0 1.5rem 0.5rem;
+  background: var(--card);
+  border: 0.5px solid var(--gold);
+  border-radius: 14px;
+  padding: 0.875rem 1rem;
+}
+.searchInput {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--cream);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  outline: none;
+}
+.searchInput::placeholder { color: var(--muted); }
+.searchHint { font-size: 11px; color: var(--muted); margin-top: 6px; font-style: italic; }
+
+/* Add CTA */
+.addFoodCta {
+  display: block;
+  margin: 0.75rem 1.5rem 0;
+  width: calc(100% - 3rem);
+  background: none;
+  border: 0.5px dashed var(--border);
+  border-radius: 14px;
+  padding: 0.875rem;
+  color: var(--muted);
+  font-size: 13px;
+  font-family: var(--font-sans);
+  transition: border-color 0.2s, color 0.2s;
+}
+.addFoodCta:hover { border-color: var(--gold); color: var(--gold); }
+
+/* v2 additions */
+.mealSelect {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+  color: var(--cream);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  padding: 4px 8px;
+  outline: none;
+  cursor: pointer;
+}

@@ -1,0 +1,60 @@
+.wrapper { padding-bottom: 2rem; }
+
+.header { padding: 1.5rem 1.5rem 1rem; }
+.label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+.header h2 { font-size: 28px; }
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0 1.5rem 1rem;
+}
+
+.statTile {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 18px;
+  padding: 1rem;
+}
+.statLabel  { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; }
+.statValue  { font-family: var(--font-serif); font-size: 26px; font-weight: 300; color: var(--cream); line-height: 1; margin-bottom: 0.4rem; }
+.statUnit   { font-size: 12px; color: var(--muted); font-family: var(--font-sans); }
+.statChange { font-size: 11px; }
+.positive   { color: var(--sage); }
+.neutral    { color: var(--muted); }
+
+.chartCard {
+  margin: 0 1.5rem 1rem;
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 20px;
+  padding: 1.25rem;
+}
+.chartCard h3 { font-size: 18px; font-weight: 300; margin-bottom: 1rem; }
+
+.chartBars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 80px;
+}
+.chartBar {
+  flex: 1;
+  border-radius: 4px 4px 0 0;
+  min-height: 4px;
+  transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+}
+
+.weekLabels {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+.weekLabels span {
+  flex: 1;
+  text-align: center;
+  font-size: 10px;
+  color: var(--muted);
+}
