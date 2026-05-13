@@ -1,11 +1,10 @@
 {
   "name": "vitae-app",
   "version": "2.0.0",
-  "description": "Vitae — App premium de bienestar y nutrición",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npx --yes vite build",
     "preview": "vite preview"
   },
   "dependencies": {
